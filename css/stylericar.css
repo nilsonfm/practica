@@ -383,12 +383,32 @@ p {
 .menu:hover {
 	color:#FF6600;
 	text-decoration:none;
+	z-index: 1
 	/*text-shadow:0 0 13px white;*/
 }
 .menu:active {
 	color:#003F5E;
 	text-decoration: none;
 }
+
+
+.menu li:hover ul {
+        display:block;
+        position: absolute;
+        padding: 0;
+        margin:-16px;
+        margin-top:10px;
+        width: 10px;
+        float: none;
+        z-index: 1;
+                }
+.menu  li ul {
+        display:none;
+        position:absolute;
+        z-index: 0;
+        min-width:130px;
+        }
+
 /*SEUDO CLASES*/
 p {
 	font-size:12px;
@@ -420,10 +440,13 @@ article :hover {
 	background:#B3B3B3;
 	opacity: 1;
 	width: 550px;
+	z-index: 2;
+
 }
 article :hover {
 	box-shadow:0px 0px 25px white;
 	-webkit-box-shadow:0px 0px 25px white;
+	
 }
 
 
@@ -445,6 +468,8 @@ article :hover {
 	position:absolute;
 	transform:translate(-140px,0px);
 	-webkit-transform:translate(-140px,0px);
+	z-index: 3;
+
 }
 #anyenson {
 	width:100px;
